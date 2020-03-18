@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import List from '../views/EventList.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import List from '../views/EventList.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'List',
-    component: List
+    component: List,
   },
   {
     path: '/event/create',
@@ -17,19 +17,19 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/EventCreate.vue')
+      import(/* webpackChunkName: "about" */ '../views/EventCreate.vue'),
   },
   {
     path: '/event/:id',
     name: 'Show',
     props: true,
-    component: () => import('../views/EventShow.vue')
-  }
-]
+    component: () => import('../views/EventShow.vue'),
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
