@@ -4,7 +4,7 @@
       class="event-link"
       v-for="event in events"
       :key="event.id"
-      :to="{ name: 'Show', params: { id: event.id } }"
+      :to="{ name: 'Show', params: { id: event.id, title: event.title } }"
     >
       <div class="event-card -shadow">
         <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
