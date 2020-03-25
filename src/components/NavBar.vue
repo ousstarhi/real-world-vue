@@ -2,9 +2,11 @@
   <div id="nav" class="nav">
     <router-link to="/" class="brand">Real World Events</router-link>
     <nav>
-      <router-link :to="{ name: 'List' }">List</router-link>
+      <router-link class="nav-item" :to="{ name: 'List' }">List</router-link>
       |
-      <router-link :to="{ name: 'Create' }">Create</router-link>
+      <router-link class="nav-item" :to="{ name: 'Create' }"
+        >Create</router-link
+      >
     </nav>
   </div>
 </template>
