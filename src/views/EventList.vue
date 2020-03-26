@@ -2,7 +2,6 @@
   <div>
     <h1 class="global-color">Event Listing</h1>
     <EventCard />
-    <BaseIcon />
   </div>
 </template>
 
