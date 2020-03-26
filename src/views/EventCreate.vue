@@ -7,7 +7,10 @@
     </MediaBox>
     <MediaBox :src="logo">
       <span slot="heading">Oussama Tarhi V2</span>
-      <span slot="paragraph">These are my infos V2</span>
+      <template slot="paragraph">
+        These are my infos V2
+        <BaseIcon name="book" />
+      </template>
     </MediaBox>
   </div>
 </template>
