@@ -2,8 +2,6 @@
   <div>
     <router-link
       class="event-link"
-      v-for="event in events"
-      :key="event.id"
       :to="{ name: 'Show', params: { id: event.id, title: event.title } }"
     >
       <div class="event-card -shadow">
@@ -17,43 +15,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      events: [
-        {
-          id: 1,
-          title: 'Beach Cleanup',
-          date: 'Wed Mar 18, 2020',
-          time: '8:00',
-          attendees: [
-            {
-              id: 'abc123',
-              name: 'Oussama Tarhi',
-            },
-            {
-              id: 'def456',
-              name: 'Saad Tarhi',
-            },
-          ],
-        },
-        {
-          id: 2,
-          title: 'Park Cleanup',
-          date: 'Thu Mar 19, 2020',
-          time: '16:00',
-          attendees: [
-            {
-              id: 'abc123',
-              name: 'Oussama Tarhi',
-            },
-            {
-              id: 'def456',
-              name: 'Saad Tarhi',
-            },
-          ],
-        },
-      ],
-    };
+  props: {
+    event: {
+      type: Object,
+    },
   },
 };
 </script>
